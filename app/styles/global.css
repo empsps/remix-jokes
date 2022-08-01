@@ -5,6 +5,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/roboto-mono/roboto-mono-v22-latin-regular.woff')
+    format('woff');
+}
+
 :root {
   --hs-links: 48 100%;
   --color-foreground: hsl(0, 0%, 100%);
@@ -351,4 +359,12 @@ label > [type='radio'] {
   background-color: hsla(356, 77%, 59%, 0.747);
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
+}
+
+.code-container {
+  background-color: hsla(356, 77%, 36%, 0.747);
+  font-family: 'Roboto Mono';
+  font-size: 0.84rem;
+  border-radius: 0.25rem;
+  padding: 0.3rem 0.4rem;
 }
