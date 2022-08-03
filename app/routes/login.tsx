@@ -1,4 +1,8 @@
-import type { ActionFunction, LinksFunction } from '@remix-run/node';
+import type {
+  ActionFunction,
+  LinksFunction,
+  MetaFunction,
+} from '@remix-run/node';
 import { json } from '@remix-run/node';
 import { Form, Link, useActionData, useSearchParams } from '@remix-run/react';
 import stylesUrl from '~/styles/login.css';
@@ -124,6 +128,13 @@ export const action: ActionFunction = async ({ request }) => {
       });
     }
   }
+};
+
+export const meta: MetaFunction = () => {
+  return {
+    title: 'Login | Remix Jokes',
+    description: 'Login and start submitting your jokes!',
+  };
 };
 
 const Login = () => {

@@ -203,6 +203,23 @@ h6 {
   outline: none;
 }
 
+.danger {
+  background-color: hsl(356, 70%, 39%);
+  color: white;
+  --shadow-color: hsl(356, 70%, 28%);
+  --shadow-size: 3px;
+  box-shadow: 0 var(--shadow-size) 0 0 var(--shadow-color);
+}
+
+.danger:hover {
+  color: white;
+}
+
+.danger:active {
+  box-shadow: 0 calc(var(--shadow-size) - var(--press)) 0 0 var(--shadow-color);
+  background-color: hsl(356, 70%, 48%);
+}
+
 /* forms */
 
 form {
@@ -364,7 +381,7 @@ label > [type='radio'] {
 .code-container {
   background-color: hsla(356, 77%, 36%, 0.747);
   font-family: 'Roboto Mono';
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   border-radius: 0.25rem;
   padding: 0.3rem 0.4rem;
 }

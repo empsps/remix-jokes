@@ -61,13 +61,20 @@ export default function JokesRoute() {
         <div className='container'>
           <div className='jokes-list'>
             <Link to='.'>Get a random joke</Link>
-            <p>Here are a few more jokes to check out:</p>
+            {data.jokeListItems ? (
+              <p>Here are a few more jokes to check out:</p>
+            ) : null}
+
             <ul>
-              {data.jokeListItems.map((joke) => (
-                <li key={joke.id}>
-                  <Link to={joke.id}>{joke.name}</Link>
-                </li>
-              ))}
+              {data.jokeListItems
+                ? data.jokeListItems.map((joke) => (
+                    <li key={joke.id}>
+                      <Link prefetch='intent' to={joke.id}>
+                        {joke.name}
+                      </Link>
+                    </li>
+                  ))
+                : null}
             </ul>
             <Link to='new' className='button'>
               Add your own
